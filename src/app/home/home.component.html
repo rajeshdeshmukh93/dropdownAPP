@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="main" (click) ="dropdownOpen()">
+        <img src="{{srcvariable}}" alt="{{altvariable}}"> {{namevariable}}
+    </div>
+    <div class="content" *ngIf="show">
+        <ul>
+            <li *ngFor= "let arr of array" (click)="changeCode(arr)">
+                <img src="{{arr.src}}" alt="{{arr.alt}}"> {{arr.name}} 
+            </li>
+            <!-- <li>
+                <img src="../../assets/images/javascript.png" alt="javascript"> javascript
+            </li>
+            <li>
+                <img src="../../assets/images/pythone.png" alt="Pythone"> Pythone
+            </li>
+            <li>
+                <img src="../../assets/images/react.png" alt="React"> React
+            </li> -->
+        </ul>
+    </div>
+</div>

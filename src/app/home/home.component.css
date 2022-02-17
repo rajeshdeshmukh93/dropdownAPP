@@ -1,0 +1,29 @@
+.main {
+    background-color: rgb(194, 118, 118);
+    border: 1px solid red;
+    cursor: pointer;
+    width: 400px;
+    padding: 10px;
+}
+
+.content {
+    background-color: rgb(194, 118, 118);
+    border: 1px solid red;
+    cursor: pointer;
+    width: 400px;
+    padding: 10px;
+}
+
+.content ul li {
+    list-style-type: none;
+    border-bottom: olive;
+    padding: 10px;
+}
+
+.content ul li:hover {
+    background-color: rgb(161, 74, 74);
+}
+
+.content ul li:active {
+    background-color: rgb(15, 8, 122);
+}
