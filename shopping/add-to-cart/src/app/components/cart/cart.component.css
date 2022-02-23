@@ -1,0 +1,16 @@
+
+
+/* .container{
+    margin-top: 20px;
+    background-color: blanchedalmond;
+    text-align: center;
+}
+*/
+ table {
+    width: 100%;
+  } 
+ 
+  table,th,td {
+    border : 1px solid black;
+    border-collapse: collapse;
+  } 

@@ -1,0 +1,25 @@
+<form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">UserName:</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" formControlName="username"
+            aria-describedby="emailHelp">
+        <div id="emailHelp" class="form-text"></div>
+        <span class="text-danger" *ngIf="signupForm.controls['username'].dirty && signupForm.hasError('required','username')">*Username is required</span>
+    </div><br>
+    <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Password:</label>
+        <input type="password" class="form-control" formControlName="password" id="exampleInputPassword1">
+        <span class="text-danger" *ngIf="signupForm.controls['password'].dirty && signupForm.hasError('required','password')">*Password is required</span>
+    </div><br>
+    <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Confirm Password:</label>
+        <input type="password" class="form-control" formControlName="confirmpassword" id="exampleInputPassword1">
+        <span class="text-danger" *ngIf="signupForm.controls['confirmpassword'].dirty && signupForm.hasError('required','confirmpassword')">*Confirm password is required</span>
+    </div>
+    
+
+    <button type="submit" class="btn btn-primary" [disabled]="!signupForm.valid">Submit</button>
+</form><br>
+<!-- <button (click)="remove()">Remove Item</button> -->
+
+<button type="button" class="btn btn-danger" (click)="remove()">Remove Item</button>

@@ -1,0 +1,43 @@
+<mat-card class="img">
+    <mat-card-header>
+        <div mat-card-avatar></div>
+        <mat-card-title style="margin-top: 10px;">All Products</mat-card-title>
+    </mat-card-header>
+
+
+    <a><img class="img" mat-card-image src="../../../assets/allProduct.jpg" alt="AllProducts"></a>
+
+    <a><img class="img" mat-card-image src="../../../assets/Electronic.jpg" alt="Electronic"></a>
+
+    <a><img class="img" mat-card-image src="../../../assets/fashin.jpg" alt="Fashion"></a>
+
+    <a><img class="img" mat-card-image src="../../../assets/jewellary.jpg" alt="Jewellary"></a>
+</mat-card><br>
+
+<mat-grid-list [cols]="breakpoint" rowHeight="4:5" (window:resize)="onResize($event)">
+    <mat-grid-tile *ngFor="let pro of productList">
+        <mat-card class="example-card" >
+            <mat-card-header>
+                <div mat-card-avatar class="example-header-image"></div>
+                <mat-card-title style="color: chocolate; background-color: rgb(61, 109, 211); margin-bottom: 20px; font-size: 20px;">{{pro.category}}</mat-card-title>
+            </mat-card-header>
+            <a><img class="image" mat-card-image src="{{pro.image}}" alt="img" width="10rem" height="200rem"></a>
+            <mat-card-content>
+                <p style=" white-space: nowrap;overflow: hidden; text-overflow: ellipsis;">{{pro.description}}</p>
+                <strong>Price</strong>${{pro.price}}
+            </mat-card-content>
+            <mat-card-actions>
+                <button (click)="addTocart(pro)" class="btn btn-primary" mat-button>Add To cart</button>
+            </mat-card-actions>
+        </mat-card>
+    </mat-grid-tile>
+</mat-grid-list>
+<!-- <div class="container">
+    <div class="row">
+        <ng-container *ngFor="let pro of productList">
+            <div class="col-lg-3">
+                {{pro.category}}
+            </div>
+        </ng-container>
+    </div>
+</div> -->

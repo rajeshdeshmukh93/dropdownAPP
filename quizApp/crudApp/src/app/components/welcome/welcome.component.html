@@ -1,0 +1,17 @@
+<div class="flex-container">
+    <div class="flex-item">
+        <h1 style="color: aqua;">Welcome to quiz App</h1>
+        <h4>Rules:</h4>
+        <ol>
+            <li>Correct question give you 10 point</li>
+            <li>Incorrect question give you -10 point</li>
+            <li>You have 60 sec to answer to each question</li>
+            <li>Refreshing the page restart the Quiz</li>
+        </ol>
+        <h1 style="font-family: 'Courier New', Courier, monospace; margin-left: 250px;">All the Best!!</h1>
+        <div class="name" col-md-4></div>
+        <label>Enter your name:</label><br>
+        <input #name type="text" placeholder="Please Enter name" class="form-contrl"> &nbsp;
+        <button type="button" class="btn btn-primary" routerLink='/question' (click)="startQuiz()">Start the Quiz!!</button>
+    </div>
+</div>

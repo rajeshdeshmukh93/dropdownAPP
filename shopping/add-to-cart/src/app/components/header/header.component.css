@@ -1,0 +1,38 @@
+.nav {
+    background-color :blue;
+    width: auto;
+    height: 70px;
+}
+
+
+.input {
+    text-align: center;
+    margin-top: 20px;
+    margin-left: 10px;
+    width: 500px;
+}
+
+.search-icon {
+    position: absolute;
+    z-index: 10;
+    right: 50%;
+    top:20px;
+    color: blue;
+}
+
+.button{
+    margin-top:20px;
+    margin-bottom: 35px;
+    margin-left: 10px;
+}
+
+.cart{
+    margin-left: 200px;
+    margin-top: 20px;
+    margin-bottom: 35px;
+}
+
+.img {
+    width: 6px;
+    height: 10px;
+}

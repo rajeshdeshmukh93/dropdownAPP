@@ -1,0 +1,40 @@
+.flex-container{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    border-style: ridge;
+    margin-left: 150px;
+    margin-right: 150px;
+    margin-top: 50px;
+    background-color:rgb(234, 229, 240)
+}
+
+/* .header{
+    margin-left: 700px;
+    text-align: center;
+} */
+
+.flex-item{
+    flex-direction: row;
+}
+
+.row{
+    float: left;
+}
+
+.card{
+    max-width: 800px;
+    margin:auto;
+    padding: 10px;
+}
+
+li{
+    list-style-type: none;
+    cursor: pointer;
+    margin: 10px;
+}
+
+li .card:hover{
+    border: 1px solid blue;
+    
+}

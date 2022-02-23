@@ -1,0 +1,21 @@
+
+<p>{{myid}}</p>
+<form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="exampleInputEmail1" class="form-label">UserName:</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" formControlName="username" aria-describedby="emailHelp">
+      <div id="emailHelp" class="form-text"></div>
+      <span class="text-danger" *ngIf="myForm.controls['username'].dirty && myForm.hasError('required','username')">*Username is required</span>
+    </div><br>
+    <div class="form-group">
+      <label for="exampleInputPassword1" class="form-label">Password:</label>
+      <input type="password" class="form-control" formControlName="password" id="exampleInputPassword1">
+      <span class="text-danger" *ngIf="(myForm.controls['password'].dirty) && (myForm.controls['password'].touched) && (myForm.hasError('required','password'))">*Password is required</span>
+    </div><br>
+   
+    <button type="submit" class="btn btn-primary" [disabled]="!myForm.valid">Submit</button>
+  </form><br>
+ 
+  <button type="button" class="btn btn-danger"  (click)="remove()">Remove Item</button>
+
+
