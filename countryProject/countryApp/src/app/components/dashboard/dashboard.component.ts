@@ -27,7 +27,7 @@ length :number = 100;
 pageSize: number =10;
 pageSizeOptions : number[] = [10,50,100,200];
 public flag : boolean= true;
-
+currentPage :number = 0;
   constructor(private userService: UserService, private router: Router) { }
 
 
@@ -94,12 +94,12 @@ public flag : boolean= true;
     this.router.navigate(["/dashboard",data.name.common]);
   }
 
-  next(){
-
-  }
-
-  previous(){
-
+  nextPage(event:any){
+    this.flag=false;
+    console.log("Next page:", event);
+    this.pageList = this.data1.slice(0,event.pageSizeOptions);
+    console.log(this.pageList);
+    this.flag=true;
   }
 
 }
